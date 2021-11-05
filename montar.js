@@ -35,3 +35,14 @@ function listarFilmesNaTela(filme) {
     elementoListaFilmes.innerHTML =
       elementoListaFilmes.innerHTML + elementoFilmeFavorito;
 }
+
+
+var film = document.getElementById("listaFilmes");
+
+film.addEventListener("dblclick", function(event){
+   event.target.parentNode.classList.add("fadeOut");
+
+   setTimeout(function(){
+    event.target.parentNode.remove();
+   }, 500);    
+});
