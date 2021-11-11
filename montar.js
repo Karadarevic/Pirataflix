@@ -1,23 +1,21 @@
+var film = document.getElementById("listaFilmes");
 var lista = [
     "https://criticalhits.com.br/wp-content/uploads/2020/01/dragon-ball-z-filme-dead-zone-01.jpg",
-    "https://img.elo7.com.br/product/zoom/1E0EB9C/poster-cartaz-o-poderoso-chefao-chefao.jpg"
+    "https://upload.wikimedia.org/wikipedia/pt/1/1b/Schoolrockposter.jpg",
+    "https://s3-sa-east-1.amazonaws.com/catalogodasartes/obra_12469309.jpg"
 ];
 
+function layout (lista){
 
-document.write("<img class='first' src=" + lista[0] + ">");
-document.write("<img class='first' src=" + lista[1] + ">");
+  var total = lista.length
 
+  for (var i = 0; i < total; i++){
 
-//function layout (lista){
+    document.write("<img style='margin: 10px; max-height: 230px;' src=" + lista[i] + ">");
+  }
+}
 
-  //for (var i = 0; i < lista.length; i++){
-
-    //var lista = lista[i]
-
-    //document.write("<img class='first' src=" + lista[i] + ">");
-  //}
-//}
-
+layout(lista)
   
 function adicionarFilme() {
     var filmeFavorito = document.getElementById("filme").value;
@@ -37,7 +35,6 @@ function listarFilmesNaTela(filme) {
 }
 
 
-var film = document.getElementById("listaFilmes");
 
 film.addEventListener("dblclick", function(event){
    event.target.parentNode.classList.add("fadeOut");
